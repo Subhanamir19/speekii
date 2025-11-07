@@ -1,6 +1,26 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    /* Core strictness */
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    /* Module + JSX */
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+
+    /* Reliability / speed */
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+
+    /* Output control */
+    "isolatedModules": true,
+    "resolveJsonModule": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"]
 }
